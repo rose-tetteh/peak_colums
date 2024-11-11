@@ -12,7 +12,7 @@ public class Main {
      */
     public static int[][] getMatrix(int row, int column){
         int[][] matrix = new int[row][column];
-        System.out.printf("Enter "+row*column+" values of the matrix row by row: eg 2 3 4 go to the next line and enter values for the next row: \n", row, column);
+        System.out.printf("Enter "+row*column+" values of the matrix row by row: eg 2 3 4 go to the next line and enter values for the next row Note: any extra score will not be considered: \n", row, column);
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 matrix[i][j] = validation();
@@ -23,7 +23,7 @@ public class Main {
 
     /**
      * Validation int.
-     *
+     * Check to make sure the input value is an integer
      * @return the int
      */
     public static int validation(){
