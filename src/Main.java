@@ -38,25 +38,25 @@ public class Main {
      * Find peak column string.
      *
      * @param matrix        the matrix
-     * @param matrix_row    the matrix row
-     * @param matrix_column the matrix column
+     * @param matrixRow    the matrix row
+     * @param matrixColumn the matrix column
      */
-    public static void findPeakColumn(int[][] matrix, int matrix_row, int matrix_column) {
-        for (int row = 0; row < matrix_row; row++) {
+    public static void findPeakColumn(int[][] matrix, int matrixRow, int matrixColumn) {
+        for (int row = 0; row < matrixRow; row++) {
             // Find the maximum value in the current row (handling possible ties)
             int maxInRow = matrix[row][0];
-            for (int col = 1; col < matrix_column; col++) {
+            for (int col = 1; col < matrixColumn; col++) {
                 if (matrix[row][col] > maxInRow) {
                     maxInRow = matrix[row][col];
                 }
             }
 
             //check each occurrence of maxInRow in the row
-            for (int col = 0; col < matrix_column; col++) {
+            for (int col = 0; col < matrixColumn; col++) {
                 if (matrix[row][col] == maxInRow) {
                     // Check if the value is the minimum in its column
                     boolean isMinInColumn = true;
-                    for (int checkRow = 0; checkRow < matrix_row; checkRow++) {
+                    for (int checkRow = 0; checkRow < matrixRow; checkRow++) {
                         if (matrix[checkRow][col] < maxInRow) {
                             isMinInColumn = false;
                             break;
@@ -76,11 +76,11 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Enter the number of rows and number of columns of the matrix respectively eg 2 3: ");
-        int matrix_row = validation();
-        int matrix_column = validation();
+        int row = validation();
+        int column = validation();
 
-        int[][] matrix = getMatrix(matrix_row, matrix_column);
+        int[][] matrix = getMatrix(row, column);
 
-        findPeakColumn(matrix, matrix_row, matrix_column);
+        findPeakColumn(matrix, row, column);
     }
 }
