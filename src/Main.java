@@ -12,7 +12,7 @@ public class Main {
      */
     public static int[][] getMatrix(int row, int column){
         int[][] matrix = new int[row][column];
-        System.out.println("Enter the values of the matrix row by row: eg 2 3 4 go to the next line and enter values for the next row: ");
+        System.out.printf("Enter "+row*column+" values of the matrix row by row: eg 2 3 4 go to the next line and enter values for the next row: \n", row, column);
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 matrix[i][j] = validation();
