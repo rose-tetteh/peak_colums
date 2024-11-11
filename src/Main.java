@@ -76,11 +76,11 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Enter the number of rows and number of columns of the matrix respectively eg 2 3: ");
-        int row = validation();
+        int row1 = validation();
         int column = validation();
 
-        int[][] matrix = getMatrix(row, column);
+        int[][] matrix = getMatrix(row1, column);
 
-        findPeakColumn(matrix, row, column);
+        findPeakColumn(matrix, row1, column);
     }
 }
